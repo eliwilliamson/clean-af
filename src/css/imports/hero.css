@@ -1,0 +1,58 @@
+.blog .hero {
+  margin: $xl 0;
+}
+
+.post .hero {
+  margin-bottom: 0;
+}
+
+.hero {
+  width: 100%;
+  margin: $medium 0;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    @media screen and (min-width: $tablet) {
+      width: initial;
+      max-width: 70%;
+      margin-right: $small;
+    }
+  }
+
+  .copy {
+    margin: calc($medium - 12px) 0 0 0;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0;
+    }
+  }
+
+  h2 {
+    margin-top: $micro;
+
+    .text-link {
+      &:after {
+        bottom: -2px;
+      }
+
+      &:hover {
+        &:after {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .publish-date {
+    color: color(black a(50%));
+    font-weight: $regular;
+    font-style: italic;
+  }
+}

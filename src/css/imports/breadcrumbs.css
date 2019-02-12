@@ -1,0 +1,13 @@
+.breadcrumbs {
+  background: color(black a(5%));
+  padding: $small;
+  margin-top: -2px;
+
+  .text-link {
+    font-weight: $semibold;
+  }
+
+  span {
+    margin: 0 $micro;
+  }
+}

@@ -1,0 +1,13 @@
+<a href="{{ .Permalink }}" class="article-teaser">
+  {{ if .Params.featuredImage }}
+    <img class="thumbnail" src="{{ .Params.featuredImage }}">
+  {{ else }}
+    <div class="placeholder thumbnail"></div>
+  {{ end }}
+  <div class="copy">
+    <h2>{{ .Title }}</h2>
+    <h3 class="publish-date">Published on {{ .Date.Format "Jan 2, 2006" }}</h3>
+    <p class="summary">{{ .Content | plainify | truncate 200 }}</p>
+    <div class="text-link">Read more</div>
+  </div>
+</a>

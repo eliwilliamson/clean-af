@@ -1,0 +1,16 @@
+/*load fonts*/
+@import url('https://rsms.me/inter/inter.css');
+
+/*universal styles*/
+@import "imports/reset.css";
+@import "imports/global.css";
+@import "imports/typography.css";
+@import "imports/buttons.css";
+
+/*partial styles*/
+@import "imports/header.css";
+@import "imports/hero.css";
+@import "imports/breadcrumbs.css";
+@import "imports/secondary-nav.css";
+@import "imports/article-teaser.css";
+@import "imports/footer.css";

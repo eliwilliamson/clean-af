@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ partial "breadcrumbs" . }}
+<div class="post container">
+  {{ partial "hero" . }}
+  {{ .Content }}
+</div>
+{{end}}

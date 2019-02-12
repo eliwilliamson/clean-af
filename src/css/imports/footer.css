@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: $small 0;
+  border-top: 2px solid color(black a(5%));
+  font-size: 10px;
+
+  .copyright {
+    color: color(black a(50%));
+    font-style: italic;
+  }
+
+  .subtle-link:not(:last-child) {
+    margin-right: $tiny;
+  }
+}

@@ -1,0 +1,65 @@
+a,
+button {
+  color: color(black a(70%));
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  transition: all .2s ease-in;
+
+  &:visited,
+  &:focus,
+  &:hover {
+    color: black;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.text-link {
+  font-weight: inherit;
+  position: relative;
+
+  &.passive {
+    color: black;
+
+    &:after {
+      opacity: 0;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: $blue;
+    height: $micro;
+    width: 100%;
+    bottom: calc($micro / -2);
+    left: 0;
+    opacity: .5;
+    z-index: -1;
+    transition: .1s ease-in;
+  }
+
+  &:hover,
+  &:focus {
+    &:after {
+      bottom: 0;
+      opacity: 1;
+      height: 2px;
+    }
+  }
+}
+
+.subtle-link {
+  font-size: inherit;
+  font-weight: $semibold;
+  text-decoration: underline;
+  opacity: 0.5;
+}

@@ -1,0 +1,38 @@
+html,
+body,
+section {
+  font-size: $tiny;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: $bold;
+}
+
+h1 {
+  font-size: $medium;
+  line-height: calc($medium + $micro);
+}
+
+h2 {
+  font-size: $small;
+  line-height: calc($small + $micro);
+}
+
+h3 {
+  font-size: 18px;
+  line-height: calc(18px + $micro);
+  margin-bottom: $small;
+}
+
+p {
+  font-size: $tiny;
+  line-height: 28px;
+  margin: 0 0 $small 0;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0 0 $medium 0;
+  }
+}

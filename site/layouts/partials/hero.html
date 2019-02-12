@@ -1,0 +1,18 @@
+<section class="hero">
+  {{ if or (.IsPage) (.IsHome) }}
+    {{ if .Params.featuredImage}}
+      <img src="{{ .Params.featuredImage }}">
+    {{ else if ne .Section "blog" }}
+      <img src="/img/art.svg">
+    {{ end }}
+  {{ end }}
+  <div class="copy">
+    {{ if and (eq .Section "blog") (.IsPage) }}
+      <h1>{{ .Title }}</h1>
+      <h2 class="publish-date">Published on {{ .Date.Format "Jan 2, 2006" }}</h2>
+    {{ else }}
+      <h1>This is a hero headline.</h1>
+      <h2>This is a super-cool hero subhead. <a href="/" class="text-link">Let’s dance</a>.</h2>
+    {{ end }}
+  </div>
+</section>

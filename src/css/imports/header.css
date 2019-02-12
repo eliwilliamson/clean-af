@@ -1,0 +1,99 @@
+$navItems: 5;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: $small 0;
+  border-bottom: 2px solid color(black a(5%));
+
+  .logo {
+    color: black;
+    text-align: center;
+    font-size: $small;
+    font-weight: $black;
+    width: 100%;
+    margin-bottom: $tiny;
+
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+      width: initial;
+      margin-bottom: 0;
+    }
+  }
+
+  nav {
+    margin-bottom: -2px;
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      width: initial;
+    }
+  }
+
+  .nav-link {
+    font-weight: $semibold;
+    display: inline-block;
+    text-align: center;
+    width: calc(100% / $navItems);
+    margin: 0 0 -$small 0;
+    padding: $tiny;
+    box-sizing: border-box;
+
+    @media screen and (min-width: $tablet) {
+      display: inline;
+      margin: 0;
+    }
+
+    &:not(last-child) {
+      margin-right: -4px;
+    }
+
+    &.active ~ hr {
+      left: 2px;
+    }
+    &:hover ~ hr {
+      left: 2px !important;
+    }
+
+    &:nth-child(2).active ~ hr {
+      left: calc((100% / $navItems) + 2px);
+    }
+    &:nth-child(2):hover ~ hr {
+      left: calc((100% / $navItems) + 2px) !important;
+    }
+
+    &:nth-child(3).active ~ hr {
+      left: calc((100% / $navItems) * 2 + 2px);
+    }
+    &:nth-child(3):hover ~ hr {
+      left: calc((100% / $navItems) * 2 + 2px) !important;
+    }
+
+    &:nth-child(4).active ~ hr {
+      left: calc((100% / $navItems) * 3 + 2px);
+    }
+    &:nth-child(4):hover ~ hr {
+      left: calc((100% / $navItems) * 3 + 2px) !important;
+    }
+
+    &:nth-child(5).active ~ hr {
+      left: calc((100% / $navItems) * 4 + 2px);
+    }
+    &:nth-child(5):hover ~ hr {
+      left: calc((100% / $navItems) * 4 + 2px) !important;
+    }
+  }
+
+  hr {
+    height: 2px;
+    width: calc(100% / $navItems);
+    margin: 1px 0 0 0;
+    background: $blue;
+    border: none;
+    position: relative;
+    left: 0;
+    bottom: -$small;
+    transition: left .3s ease-in-out;
+  }
+}

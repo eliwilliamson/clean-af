@@ -1,0 +1,11 @@
+<header id='header' class='header container'>
+  <a href='/' class='logo'>Your Logo.<!-- <img src='/img/logo.svg'/> --></a>
+  <nav>
+    <a class='nav-link{{ if .IsHome }} active{{ end }}' href='/'>Home</a>
+    <a class='nav-link{{ if eq .Section "blog" }} active{{end}}' href='/blog'>Blog</a>
+    <a class='nav-link' href='/post'>Post</a>
+    <a class='nav-link{{ if eq .Title "Static Page"}} active{{end}}' href='/page'>Page</a>
+    <a class='nav-link{{ if eq .Title "UI Kit"}} active{{end}}' href='/ui-kit'>UI Kit</a>
+    <hr />
+  </nav>
+</header>

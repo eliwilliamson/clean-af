@@ -1,0 +1,82 @@
+@lost gutter 20px;
+@lost flexbox flex;
+
+.container {
+  lost-center: 960px;
+  margin: 0 $small;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 1008px) {
+    margin: 0 auto;
+  }
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+section {
+  margin: 0;
+  padding: 0;
+  font-family: $interui;
+  font-size: $tiny;
+}
+
+hr {
+  width: $xl;
+  margin: $medium auto;
+  border: none;
+  background: color(black a(10%));
+  height: 2px;
+}
+
+blockquote {
+  color: color(black a(70%));
+  font-style: italic;
+  font-size: $tiny;
+  line-height: 28px;
+  box-sizing: border-box;
+  margin: 0 0 $small $tiny;
+  padding: $micro 0 $micro $tiny;
+  border-left: calc($micro / 2) solid color($blue a(20%));
+
+  @media screen and (min-width: $tablet) {
+    margin: 0 0 $medium $medium;
+    padding: $small $medium;
+  }
+}
+
+.clearfix {
+  lost-utility: clearfix;
+}
+
+.inline-image {
+  width: 100%;
+  height: auto;
+  margin: $small 0;
+
+  @media screen and (min-width: $mobile) {
+    width: initial;
+    float: left;
+    max-width: calc(50% - $small);
+    margin: $small $small $small 0;
+  }
+}
+
+.block-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: $small;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: $medium;
+  }
+}
+
+.content {
+  margin: $medium 0;
+}

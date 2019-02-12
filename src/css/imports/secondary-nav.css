@@ -1,0 +1,28 @@
+.secondary-navs-wrapper {
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+ul.secondary-nav {
+  padding: 0;
+  margin: $small 0;
+  border-left: 2px solid color(black a(10%));
+  list-style-type: none;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  li {
+    margin: $small;
+  }
+
+  .text-link {
+    font-size: $tiny;
+    font-weight: $semibold;
+  }
+}

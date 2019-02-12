@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+  {{ partial "html-head" . }}
+  <body class="{{ if .IsHome }}landing-page{{ else }}{{ .Title | urlize }}-page{{ end }}">
+    {{ partial "header" . }}
+    {{ block "main" . }}{{end}}
+    {{ partial "footer" . }}
+  </body>
+</html>
